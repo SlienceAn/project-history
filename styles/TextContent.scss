@@ -1,0 +1,27 @@
+.box {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    text-align: center;
+    transition: all 1s ease;
+    transform-style: preserve-3d;
+    outline: solid;
+
+    &:hover {
+        transform: rotateY(180deg);
+    }
+}
+
+.text-front,
+.text-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    backface-visibility: hidden;
+}
+
+.text-back {
+    transform: rotateY(180deg);
+}
