@@ -1,7 +1,7 @@
 
-export default function TextContent() {
+export default function TextContent({ content }: any) {
     return (
-        <div className="box">
+        <div className="box" style={content ? { transform: 'rotateY(180deg)' } : {}}>
             <div className="text-front">
                 <span>front</span>
             </div>
