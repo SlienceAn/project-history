@@ -1,19 +1,22 @@
-import { useState } from "react"
+import { useRef } from "react"
+import {
+    BsFillPencilFill,
+    BsInfoSquareFill,
+    BsCalendar3,
+    BsTools,
+    BsFillPeopleFill,
+    BsQuestionSquareFill,
+    BsFillChatDotsFill
+} from "react-icons/bs"
+import ProjectInput from "../components/ProjectInput"
+import Draft from "../components/Draft"
 import useSWR from "swr"
-import { BsFillPencilFill } from "react-icons/bs"
-import { Editor, EditorState, convertFromRaw } from "draft-js"
-// const emptyContentState = convertFromRaw({
-//     entityMap: {},
-//     blocks: [{
-//         text: '',
-//         key: 'foo',
-//         type: 'unstyled',
-//         entityRanges: [],
-//         inlineStyleRanges:[]
-//     }]
-// })
-export default function ProjectUpload() {
-    const [editorState, setEditorState] = useState(() => EditorState.createEmpty())
+export default function ProjectUpload(): JSX.Element {
+    const pName = useRef<HTMLInputElement>(null)
+    const pDate = useRef<HTMLInputElement>(null)
+    const pType = useRef<HTMLInputElement>(null)
+    const pCompany = useRef<HTMLInputElement>(null)
+    const pTool = useRef<HTMLInputElement>(null)
     return (
         <div className="col-md-6 col-sm-12 px-2 py-4 m-auto">
             <div className="card">
@@ -24,19 +27,54 @@ export default function ProjectUpload() {
                     </span>
                 </div>
                 <div className="card-body row gy-2">
-                    <label htmlFor="name" className="col-md-4 col-sm-12">
-                        <span><strong>專案名稱</strong></span>
-                        <input id="name" className="form-control" />
-                    </label>
-                    <label htmlFor="date" className="col-md-4 col-sm-12">
-                        <span><strong>開發時程</strong></span>
-                        <input id="date" className="form-control" />
-                    </label>
-                    <label htmlFor="pType" className="col-md-4 col-sm-12">
-                        <span><strong>專案類型</strong></span>
-                        <input id="pType" className="form-control" />
-                    </label>
-                    {/* <Editor editorState={editorState} onChange={setEditorState} /> */}
+                    <ProjectInput
+                        id="name"
+                        className="col-md-4 col-sm-12"
+                        title="專案名稱"
+                        icon={<BsInfoSquareFill />}
+                        refs={pName}
+                    />
+                    <ProjectInput
+                        id="date"
+                        className="col-md-4 col-sm-12"
+                        title="開發時程"
+                        icon={<BsCalendar3 />}
+                        refs={pDate}
+                    />
+                    <ProjectInput
+                        id="pType"
+                        className="col-md-4 col-sm-12"
+                        title="專案類型"
+                        icon={<BsQuestionSquareFill />}
+                        refs={pType}
+                    />
+                    <ProjectInput
+                        id="company"
+                        className="col-md-3 col-sm-12"
+                        title="專案所屬"
+                        icon={<BsFillPeopleFill />}
+                        refs={pCompany}
+                    />
+                    <ProjectInput
+                        id="date"
+                        className="col-md-9 col-sm-12"
+                        title="使用工具"
+                        icon={<BsTools />}
+                        refs={pTool}
+                    />
+                    <ProjectInput
+                        id="description"
+                        className="col-md-12"
+                        title="專案描述"
+                        icon={<BsFillChatDotsFill />}
+                    >
+                        <Draft />
+                    </ProjectInput>
+                    <div className="col-md-12">
+                        <button className="btn btn-success w-100">
+                            <strong>上傳</strong>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
