@@ -5,3 +5,17 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
+
+.toolBtn {
+  button {
+    border: 1px solid #ced4da;
+    background-color: #fff;
+    padding-left: .5rem;
+    padding-right: .5rem;
+  }
+}
+
+.editor {
+  border: 1px solid #ced4da;
+  min-height: 250px;
+}
