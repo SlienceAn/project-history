@@ -1,6 +1,6 @@
-import ProjectGallery from "../components/ProjectGallery"
+import ProjectGallery from "./ProjectGallery"
 
-export default function Home() {
+export default function Home():JSX.Element {
   return (
     <div className="card-container">
       <ProjectGallery />

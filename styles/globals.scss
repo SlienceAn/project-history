@@ -19,3 +19,23 @@ body {
   border: 1px solid #ced4da;
   min-height: 250px;
 }
+
+.project-card {
+  border: 1px solid #ced4da;
+  min-height: 300px;
+  border-radius: .375rem;
+  position: relative;
+  background-image: url('https://picsum.photos/500/400?random=1');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &-content {
+    position: absolute;
+    width: 50%;
+    height: 80%;
+    background-color: #fff;
+    border-radius: .375rem;
+    top: 10%;
+    left: 3%;
+  }
+}

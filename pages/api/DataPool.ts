@@ -35,7 +35,7 @@ export default async function dataPool(req: NextApiRequest, res: NextApiResponse
     await client.connect()
     await client.db(database).collection<Data>(doc).insertOne({
       name: "",
-      date: "",
+      date: "", 
       type: "",
       tool: "",
       description: "",

@@ -69,6 +69,7 @@ export default function Draft(): JSX.Element {
             <div className='toolBtn'>
                 {blockTool.map(el =>
                     <BlockTool
+                        key={el.label}
                         label={el.label}
                         style={el.style}
                         icon={el.icon}
@@ -78,6 +79,7 @@ export default function Draft(): JSX.Element {
                 )}
                 {inlineTool.map(el =>
                     <InlineTool
+                        key={el.label}
                         label={el.label}
                         style={el.style}
                         icon={el.icon}
