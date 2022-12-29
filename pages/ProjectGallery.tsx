@@ -1,6 +1,6 @@
-import useSWR from "swr"
 import Link from "next/link";
 import { BsArrowRightCircleFill } from 'react-icons/bs'
+
 type props = {
     idx: number
 }
@@ -29,7 +29,7 @@ export default function ProjectGallery() {
         <div className="container overflow-hidden">
             <div className="row g-4">
                 {arr.map((el, idx) =>
-                    <div key={el} className="col-md-6 col-sm-12">
+                    <div key={idx} className="col-md-6 col-sm-12">
                         <ProjectCard idx={idx} />
                     </div>)}
             </div>
