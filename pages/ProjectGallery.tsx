@@ -26,8 +26,8 @@ const ProjectCard = ({ idx }: props): JSX.Element => {
 export default function ProjectGallery() {
     const arr = new Array(10).fill(1)
     return (
-        <div className="container overflow-hidden">
-            <div className="row g-4">
+        <div className="container overflow-hidden py-5">
+            <div className="row g-5">
                 {arr.map((el, idx) =>
                     <div key={idx} className="col-md-6 col-sm-12">
                         <ProjectCard idx={idx} />

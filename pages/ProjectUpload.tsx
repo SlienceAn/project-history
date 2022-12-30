@@ -10,6 +10,7 @@ import {
 } from "react-icons/bs"
 import ProjectInput from "../components/ProjectInput"
 import Draft from "../components/Draft"
+import ImageUpload from "../components/ImageUpload"
 import useSWR from "swr"
 export default function ProjectUpload(): JSX.Element {
     const pName = useRef<HTMLInputElement>(null)
@@ -70,6 +71,7 @@ export default function ProjectUpload(): JSX.Element {
                     >
                         <Draft />
                     </ProjectInput>
+                    <ImageUpload />
                     <div className="col-md-12">
                         <button className="btn btn-success w-100">
                             <strong>上傳</strong>

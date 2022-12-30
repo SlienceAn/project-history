@@ -76,7 +76,20 @@ body {
     font-size: 20px;
     display: flex;
     align-items: center;
-    gap: .375rem;
+    gap: .5rem;
   }
+}
 
+.breadcrumb {
+  --bs-breadcrumb-divider-color: #ffffff !important;
+  --bs-breadcrumb-item-padding-x: 1rem !important;
+}
+.upload-box{
+  min-height: 200px;
+  border: 1px solid #ced4da;
+  display: flex;
+  flex-direction: column;
+  gap:.5rem;
+  justify-content: center;
+  align-items: center;
 }
