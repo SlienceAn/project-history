@@ -1,4 +1,4 @@
-import { useState, useEffect, Dispatch, SetStateAction } from 'react'
+import { useState, useEffect, Dispatch, SetStateAction, forwardRef, useImperativeHandle } from 'react'
 import {
     BsTypeBold,
     BsTypeItalic,
@@ -11,12 +11,13 @@ import {
     BsListOl
 } from 'react-icons/bs'
 import { Editor, EditorState, convertFromRaw, RichUtils } from "draft-js"
+import { stateToHTML } from 'draft-js-export-html'
 const emptyContentState = convertFromRaw({
     entityMap: {},
     blocks: [
         {
             text: '',
-            key: 'foo',
+            key: '',
             type: 'unstyled',
             entityRanges: [],
             depth: 0,
@@ -61,9 +62,10 @@ const BlockTool = ({ label, style, icon, editorState, setEditorState }: editor) 
 }
 export default function Draft(): JSX.Element {
     const [editorState, setEditorState] = useState(EditorState.createWithContent(emptyContentState));
-    const contentState = editorState.getCurrentContent()
+    const contentState = stateToHTML(editorState.getCurrentContent())
     const [editor, setEditor] = useState(false)
     useEffect(() => setEditor(true), [editor])
+    useImperativeHandle()
     return (
         <>
             <div className='toolBtn'>

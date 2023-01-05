@@ -32,10 +32,11 @@ export default async function dataPool(req: NextApiRequest, res: NextApiResponse
     await client.close()
   }
   if (req.method === "POST") {
+    console.log("req.body => ", req.body)
     await client.connect()
     await client.db(database).collection<Data>(doc).insertOne({
       name: "",
-      date: "", 
+      date: "",
       type: "",
       tool: "",
       description: "",

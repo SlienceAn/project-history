@@ -1,4 +1,4 @@
-import { useRef } from "react"
+import React, { useRef } from "react"
 import {
     BsFillPencilFill,
     BsInfoSquareFill,
@@ -11,13 +11,27 @@ import {
 import ProjectInput from "../components/ProjectInput"
 import Draft from "../components/Draft"
 import ImageUpload from "../components/ImageUpload"
-import useSWR from "swr"
+
 export default function ProjectUpload(): JSX.Element {
     const pName = useRef<HTMLInputElement>(null)
     const pDate = useRef<HTMLInputElement>(null)
     const pType = useRef<HTMLInputElement>(null)
     const pCompany = useRef<HTMLInputElement>(null)
     const pTool = useRef<HTMLInputElement>(null)
+    const pImage = useRef<any>(null)
+    const uploadAll = () => {
+        fetch('/api/DataPool', {
+            method: "POST",
+            body: JSON.stringify({
+                name: pName.current?.value,
+                date: pDate.current?.value,
+                type: pType.current?.value,
+                tool: pTool.current?.value,
+                company: pCompany.current?.value,
+                img: pImage.current?.files,
+            })
+        })
+    }
     return (
         <div className="col-md-6 col-sm-12 px-2 py-4 m-auto">
             <div className="card">
@@ -33,35 +47,35 @@ export default function ProjectUpload(): JSX.Element {
                         className="col-md-4 col-sm-12"
                         title="專案名稱"
                         icon={<BsInfoSquareFill />}
-                        refs={pName}
+                        ref={pName}
                     />
                     <ProjectInput
                         id="date"
                         className="col-md-4 col-sm-12"
                         title="開發時程"
                         icon={<BsCalendar3 />}
-                        refs={pDate}
+                        ref={pDate}
                     />
                     <ProjectInput
                         id="pType"
                         className="col-md-4 col-sm-12"
                         title="專案類型"
                         icon={<BsQuestionSquareFill />}
-                        refs={pType}
+                        ref={pType}
                     />
                     <ProjectInput
                         id="company"
                         className="col-md-3 col-sm-12"
                         title="專案所屬"
                         icon={<BsFillPeopleFill />}
-                        refs={pCompany}
+                        ref={pCompany}
                     />
                     <ProjectInput
                         id="date"
                         className="col-md-9 col-sm-12"
                         title="使用工具"
                         icon={<BsTools />}
-                        refs={pTool}
+                        ref={pTool}
                     />
                     <ProjectInput
                         id="description"
@@ -71,9 +85,9 @@ export default function ProjectUpload(): JSX.Element {
                     >
                         <Draft />
                     </ProjectInput>
-                    <ImageUpload />
+                    <ImageUpload ref={pImage} />
                     <div className="col-md-12">
-                        <button className="btn btn-success w-100">
+                        <button className="btn btn-success w-100" onClick={uploadAll}>
                             <strong>上傳</strong>
                         </button>
                     </div>
