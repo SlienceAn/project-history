@@ -60,12 +60,14 @@ const BlockTool = ({ label, style, icon, editorState, setEditorState }: editor) 
     }
     return <button key={label} onClick={clickEvent}>{icon}</button>
 }
-export default function Draft(): JSX.Element {
+const Draft = forwardRef((props, ref) => {
     const [editorState, setEditorState] = useState(EditorState.createWithContent(emptyContentState));
     const contentState = stateToHTML(editorState.getCurrentContent())
     const [editor, setEditor] = useState(false)
     useEffect(() => setEditor(true), [editor])
-    useImperativeHandle()
+    useImperativeHandle(ref, () => ({
+        contentState
+    }))
     return (
         <>
             <div className='toolBtn'>
@@ -94,4 +96,5 @@ export default function Draft(): JSX.Element {
             </div>
         </>
     )
-}
+})
+export default Draft;

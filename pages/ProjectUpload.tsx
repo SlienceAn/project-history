@@ -19,6 +19,7 @@ export default function ProjectUpload(): JSX.Element {
     const pCompany = useRef<HTMLInputElement>(null)
     const pTool = useRef<HTMLInputElement>(null)
     const pImage = useRef<any>(null)
+    const draft = useRef<any>(null)
     const uploadAll = () => {
         fetch('/api/DataPool', {
             method: "POST",
@@ -29,6 +30,7 @@ export default function ProjectUpload(): JSX.Element {
                 tool: pTool.current?.value,
                 company: pCompany.current?.value,
                 img: pImage.current?.files,
+                description: draft.current?.contentState
             })
         })
     }
@@ -83,7 +85,7 @@ export default function ProjectUpload(): JSX.Element {
                         title="專案描述"
                         icon={<BsFillChatDotsFill />}
                     >
-                        <Draft />
+                        <Draft ref={draft} />
                     </ProjectInput>
                     <ImageUpload ref={pImage} />
                     <div className="col-md-12">
