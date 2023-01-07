@@ -1,9 +1,12 @@
 const Profile = () => {
     return (
         <div className="h-100 profile">
-            <div className="profile-header"></div>
+            <div className="profile-header">
+                
+                <img src="" alt="missing" />
+            </div>
             <div className="profile-body">
-                Profile Body
+                
             </div>
             <div className="profile-footer"></div>
         </div>
