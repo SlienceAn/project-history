@@ -1,11 +1,59 @@
 .profile {
     background-color: rgb(3, 87, 73);
-    padding: 10px;
+    padding: 10px 15px;
     color: #fff;
+    border-radius: .5rem;
 
-    &-header {}
+    &-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgb(7, 133, 112);
+        border-radius: .5rem;
 
-    &-body {}
+        .img {
+            width: 150px;
+            height: 150px;
+            outline: solid;
+            border-radius: 50%;
+
+        }
+    }
+
+    &-body {
+        h4 {
+            border-bottom: 2px solid;
+            padding-bottom: .75rem;
+        }
+
+        .info {
+            list-style-type: none;
+            padding: 0;
+
+            li {
+                display: flex;
+                align-items: center;
+                gap: .75rem;
+                padding-top: .5rem;
+                padding-bottom: .5rem;
+            }
+        }
+    }
 
     &-footer {}
+}
+
+.skill {
+    font-weight: bolder;
+    display: flex;
+  
+    &-content {
+        ul {
+            list-style-type: square;
+
+            li{
+                padding: 5px;
+            }
+        }
+    }
 }

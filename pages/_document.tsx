@@ -11,7 +11,6 @@ export default function Document() {
                 <NavBar />
                 <Main />
                 <NextScript />
-                <Footer/>
             </body>
         </Html>
     );
