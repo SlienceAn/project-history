@@ -10,13 +10,18 @@
         align-items: center;
         background-color: rgb(7, 133, 112);
         border-radius: .5rem;
+        background-image: url('../public/profile_bg.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        border: 1px solid;
 
         .img {
             width: 150px;
             height: 150px;
             outline: solid;
             border-radius: 50%;
-
+            background-color: rgb(128, 122, 122);
         }
     }
 
@@ -46,12 +51,12 @@
 .skill {
     font-weight: bolder;
     display: flex;
-  
+
     &-content {
         ul {
             list-style-type: square;
 
-            li{
+            li {
                 padding: 5px;
             }
         }

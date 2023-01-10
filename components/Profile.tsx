@@ -1,20 +1,19 @@
-import { AiOutlineMail, AiOutlineGithub, AiFillPhone } from 'react-icons/ai'
-import { BiMap } from 'react-icons/bi';
-import { BsAlarm } from 'react-icons/bs';
-import { SiGitbook } from 'react-icons/si'
+import { AiOutlineMail, AiOutlineGithub, AiFillPhone, AiFillHtml5, AiFillTool, AiFillDatabase } from 'react-icons/ai'
+import { BiMap, BiLibrary } from 'react-icons/bi';
+import { SiGitbook, SiJavascript, SiNodedotjs } from 'react-icons/si'
 const Profile = () => {
     return (
         <div className="h-100 profile">
             <div className="profile-header py-3 mb-3">
                 <div className="img mb-3"></div>
-                <span><strong>寧做王八蛋，不做窮光蛋</strong></span>
+                <span><strong>劉庭安，捷思環能-前端工程師</strong></span>
             </div>
             <div className="profile-body mb-3">
-                <h4>Information</h4>
+                <h4>個人資訊</h4>
                 <ul className="info">
                     <li>
                         <SiGitbook fontSize="2rem" />
-                        <span><strong>正修科大-數位多媒體設計系</strong> </span>
+                        <span><strong>正修科大-數位多媒體設計系學士畢業</strong> </span>
                     </li>
                     <li>
                         <AiOutlineMail fontSize="2rem" />
@@ -33,11 +32,12 @@ const Profile = () => {
                         <span><strong>https://github.com/SlienceAn</strong></span>
                     </li>
                 </ul>
-                <h4>Skill</h4>
+                <h4>專長</h4>
                 <div className="skill d-flex row py-2">
                     <div className='skill-content col-md-6'>
                         <div className='d-flex align-items-center gap-2'>
-                            <BsAlarm fontSize="1.3rem"/> 網頁前端</div>
+                            <AiFillHtml5 fontSize="1.3rem" /> 網頁前端
+                        </div>
                         <ul>
                             <li>HTML</li>
                             <li>CSS、CSS3</li>
@@ -48,32 +48,42 @@ const Profile = () => {
                         </ul>
                     </div>
                     <div className='skill-content col-md-6'>
-                        <div>前端框架</div>
+                        <div className='d-flex align-items-center gap-2'>
+                            <SiJavascript fontSize="1.3rem" /> 前端框架
+                        </div>
                         <ul>
                             <li>Bootstrap</li>
                             <li>Tailwind CSS</li>
-                            <li>Vue2 / Vue3</li>
+                            <li>Vue2、Vue3</li>
                             <li>React</li>
                         </ul>
                     </div>
                     <div className='skill-content col-md-6'>
-                        <div>第三方套件</div>
+                        <div className='d-flex align-items-center gap-2'>
+                            <BiLibrary fontSize="1.3rem" /> 第三方套件
+                        </div>
                         <ul>
-                            <li>Axios</li>
+                            <li>Axios、Ajax</li>
                             <li>Redux、Redux Toolkit</li>
                             <li>Vuex</li>
+                            <li>HighChart.js</li>
                         </ul>
                     </div>
                     <div className='skill-content col-md-6'>
-                        <div>網頁後端</div>
+                        <div className='d-flex align-items-center gap-2'>
+                            <SiNodedotjs fontSize="1.3rem" /> 網頁後端
+                        </div>
                         <ul>
                             <li>Node.js</li>
                             <li>Next.js</li>
                             <li>Express.js</li>
+                            <li>RESTFul API</li>
                         </ul>
                     </div>
                     <div className='skill-content col-md-6'>
-                        <div>工具</div>
+                        <div className='d-flex align-items-center gap-2'>
+                            <AiFillTool fontSize="1.3rem" /> 開發工具
+                        </div>
                         <ul>
                             <li>NVM、NPM</li>
                             <li>Webpack</li>
@@ -81,9 +91,12 @@ const Profile = () => {
                         </ul>
                     </div>
                     <div className='skill-content col-md-6'>
-                        <div>資料庫</div>
+                        <div className='d-flex align-items-center gap-2'>
+                            <AiFillDatabase fontSize="1.3rem" /> 資料庫
+                        </div>
                         <ul>
                             <li>SQL Server</li>
+                            <li>SQL CRUD</li>
                         </ul>
                     </div>
                 </div>
