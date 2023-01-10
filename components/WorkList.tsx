@@ -69,7 +69,7 @@ const WorkList = () => {
                                 <span><strong>維護專案</strong></span>
                                 <ul className='project'>
                                     <li>流浪狗協會官方網站</li>
-                                    <li>普普的風餐廳POS系統</li>
+                                    <li>普普的風餐廳POS系統</li>    
                                 </ul>
                             </article>
                         </div>
