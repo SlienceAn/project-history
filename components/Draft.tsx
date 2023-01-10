@@ -97,4 +97,5 @@ const Draft = forwardRef((props, ref) => {
         </>
     )
 })
+Draft.displayName = "Draft"
 export default Draft;

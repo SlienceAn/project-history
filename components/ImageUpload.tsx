@@ -46,4 +46,5 @@ const ImageUpload = forwardRef((props, ref) => {
         </div>
     )
 })
+ImageUpload.displayName = "ImageUpload"
 export default ImageUpload;
