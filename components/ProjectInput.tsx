@@ -24,5 +24,5 @@ const ProjectInput = forwardRef((props: props, ref) => {
         </label>
     );
 })
-
+ProjectInput.displayName = "ProjectInput"
 export default ProjectInput
