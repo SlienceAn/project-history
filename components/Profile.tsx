@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { AiOutlineMail, AiOutlineGithub, AiFillPhone, AiFillHtml5, AiFillTool, AiFillDatabase } from 'react-icons/ai'
 import { BiMap, BiLibrary } from 'react-icons/bi';
 import { SiGitbook, SiJavascript, SiNodedotjs } from 'react-icons/si'
@@ -101,7 +102,20 @@ const Profile = () => {
                     </div>
                 </div>
             </div>
-            <div className="profile-footer"></div>
+            <div className="profile-footer">
+                <div className='bg-white rounded-3'>
+                    <Image className='rounded-3' src="/profile_bg.jpg" alt='' width='100' height='100' />
+                </div>
+                <div className='bg-white rounded-3'>
+                    <Image className='rounded-3' src="/profile_bg.jpg" alt='' width='100' height='100' />
+                </div>
+                <div className='bg-white rounded-3'>
+                    <Image className='rounded-3' src="/profile_bg.jpg" alt='' width='100' height='100' />
+                </div>
+                <div className='bg-white rounded-3'>
+                    <Image className='rounded-3' src="/profile_bg.jpg" alt='' width='100' height='100' />
+                </div>
+            </div>
         </div>
     );
 };

@@ -3,6 +3,7 @@
     padding: 10px 15px;
     color: #fff;
     border-radius: .5rem;
+    position: relative;
 
     &-header {
         display: flex;
@@ -45,7 +46,40 @@
         }
     }
 
-    &-footer {}
+    &-footer {
+        position: absolute;
+        bottom: 10px;
+        display: flex;
+
+        div {
+            position: absolute;
+            top: -150px;
+            padding: 3px 3px 20px 3px;
+            outline: .5px solid rgb(185, 184, 184);
+
+            &:first-child {
+                transform: rotate(-35deg);
+                z-index: 1;
+                left: 10px;
+            }
+
+            &:nth-child(2) {
+                transform: rotate(35deg);
+                z-index: 2;
+                left: 100px;
+            }
+            &:nth-child(3) {
+                transform: rotate(-35deg);
+                z-index: 1;
+                left: 190px;
+            }
+            &:nth-child(4) {
+                transform: rotate(35deg);
+                z-index: 1;
+                left: 280px;
+            }
+        }
+    }
 }
 
 .skill {
