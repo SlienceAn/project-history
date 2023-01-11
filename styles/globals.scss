@@ -2,7 +2,12 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: "微軟正黑體"
+  font-family: "微軟正黑體";
+  height: 100%;
+}
+
+#__next {
+  height: 100%;
 }
 
 .toolBtn {

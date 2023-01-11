@@ -13,7 +13,7 @@ const ProjectCard = ({ idx }: props): JSX.Element => {
                     <li>test</li>
                     <li>test</li>
                 </ul>
-                <Link href="/" className="d-block text-center mt-2">
+                <Link href={`/ProjectContent/${idx}`} className="d-block text-center mt-2">
                     <button className="btn btn-success d-inline-flex gap-2 align-items-center">
                         <strong>查看專案</strong>
                         <BsArrowRightCircleFill fontSize="1.2rem" />

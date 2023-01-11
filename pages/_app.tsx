@@ -6,6 +6,7 @@ import 'draft-js/dist/Draft.css'
 import '../styles/WorkList.scss'
 import '../styles/Profile.scss'
 import '../styles/ProjectContent.scss'
+import '../styles/ImageShow.scss'
 export default function App({ Component, pageProps }: AppProps) {
   return <Component {...pageProps} />
 }
